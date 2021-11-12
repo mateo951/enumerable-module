@@ -6,8 +6,8 @@ class MyList
     @list = args
   end
 
-  def each
-    @list.each { |n| yield n }
+  def each(&block)
+    @list.each(&block)
   end
 end
 
@@ -20,5 +20,3 @@ puts(list.any? { |e| e == 2 })
 puts(list.any? { |e| e == 5 })
 
 puts(list.filter(&:even?))
-
-puts(list.each { |n| "Member: #{n}" })
