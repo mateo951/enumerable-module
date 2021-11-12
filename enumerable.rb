@@ -14,4 +14,12 @@ module MyEnumerable
     end
     false
   end
+  
+  def filter
+    even_numbers = []
+    @list.each do |n|
+      even_numbers.push(n) if yield(n)
+    end
+    even_numbers
+  end
 end
