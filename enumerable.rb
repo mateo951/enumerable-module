@@ -14,7 +14,7 @@ module MyEnumerable
     end
     false
   end
-  
+
   def filter
     even_numbers = []
     @list.each do |n|
